@@ -1,4 +1,3 @@
 pandas
 python-dotenv
-tecton>=0.4.0b22
-snowflake-connector-python[pandas]>=2.7.0
+tecton[snowflake]>=0.4.0b22
