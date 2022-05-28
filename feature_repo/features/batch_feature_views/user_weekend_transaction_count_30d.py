@@ -1,7 +1,7 @@
-from tecton import batch_feature_view, FeatureAggregation, transformation, const
+from tecton import batch_feature_view, Aggregation, transformation, const
 from entities import user
 from data_sources.transactions import transactions
-from datetime import datetime
+from datetime import datetime, timedelta
 
 @transformation(mode="snowflake_sql")
 def is_weekend(input_view, timestamp_col):
@@ -29,8 +29,8 @@ def select_weekend_cols(input_view):
     sources=[transactions],
     entities=[user],
     mode='pipeline',
-    aggregation_slide_period='1d',
-    aggregations=[FeatureAggregation(column='IS_WEEKEND', function='sum', time_windows=['30d'])],
+    aggregation_interval=timedelta(days=1),
+    aggregations=[Aggregation(column='IS_WEEKEND', function='sum', time_window=timedelta(days=30))],
     # online=True,
     # feature_start_time=datetime(2021, 4, 1),
     tags={'cost-center': 'finance'},
