@@ -1,13 +1,12 @@
-from tecton import BatchDataSource, SnowflakeDSConfig
+from tecton import BatchSource, SnowflakeConfig
 from datetime import datetime
 
 
-transactions = BatchDataSource(
+transactions = BatchSource(
     name="transactions",
-    batch_ds_config=SnowflakeDSConfig(
+    batch_config=SnowflakeConfig(
       database="TECTON_DEMO_DATA",
       schema="FRAUD_DEMO",
       table="TRANSACTIONS",
-      timestamp_key="TIMESTAMP",
     ),
 )

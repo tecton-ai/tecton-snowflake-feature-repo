@@ -1,13 +1,12 @@
-from tecton import BatchDataSource, SnowflakeDSConfig
+from tecton import BatchSource, SnowflakeConfig
 from datetime import datetime
 
 
-users = BatchDataSource(
+users = BatchSource(
     name="users",
-    batch_ds_config=SnowflakeDSConfig(
+    batch_config=SnowflakeConfig(
       database="TECTON_DEMO_DATA",
       schema="FRAUD_DEMO",
       table="USERS",
-      timestamp_key="SIGNUP_TIMESTAMP",
     ),
 )

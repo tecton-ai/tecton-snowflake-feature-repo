@@ -1,5 +1,5 @@
-from tecton import RequestDataSource, on_demand_feature_view, Input
-from pyspark.sql.types import BooleanType, DoubleType, StructType, StructField
+from tecton import RequestSource, on_demand_feature_view
+from tecton.types import Float64, Bool, Field
 from features.batch_feature_views.user_transaction_metrics import user_transaction_metrics
 from features.batch_feature_views.user_category_count import user_category_count
 
@@ -7,17 +7,10 @@ from features.batch_feature_views.user_category_count import user_category_count
 # Contact Tecton for assistance in enabling this feature.
 
 
-# output_schema = StructType([
-#     StructField('user_category_pct', DoubleType())
-# ])
-
 # @on_demand_feature_view(
-#     inputs={
-#         'user_transaction_metrics': Input(user_transaction_metrics),
-#         'user_category_count': Input(user_category_count)
-#     },
+#     sources=[user_transaction_metrics, user_category_count],
 #     mode='python',
-#     output_schema=output_schema,
+#     schema=[Field('user_category_pct', Float64)],
 #     description='Percent of a users transcations that have been in this category, in the last 40 days'
 # )
 # def user_category_pct(user_transaction_metrics, user_category_count):
