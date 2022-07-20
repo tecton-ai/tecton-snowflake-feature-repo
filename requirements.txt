@@ -1,3 +1,3 @@
 pandas
 python-dotenv
-tecton[snowflake]==0.4.0b28
+tecton[snowflake]==0.5.0b27
