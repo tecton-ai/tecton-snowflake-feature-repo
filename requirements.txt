@@ -1,3 +1,7 @@
 pandas
 python-dotenv
+<<<<<<< HEAD
 tecton[snowflake]==0.5.0b25
+=======
+tecton[snowflake]==0.5.0b27
+>>>>>>> 3403606 (Update requirements.txt)
