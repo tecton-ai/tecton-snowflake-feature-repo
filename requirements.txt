@@ -1,4 +1,4 @@
 pandas
 python-dotenv
-snowflake-snowpark-python==0.7.0
 tecton[snowflake]==0.5.0b41
+snowflake-snowpark-python==0.7.0
