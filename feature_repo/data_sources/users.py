@@ -8,5 +8,6 @@ users = BatchSource(
       database="TECTON_DEMO_DATA",
       schema="FRAUD_DEMO",
       table="USERS",
+      timestamp_field="SIGNUP_TIMESTAMP"
     ),
 )
