@@ -6,4 +6,4 @@ Please see [Tecton's documentation](https://docs.tecton.ai/) for more informatio
 
 # Install the latest version of Tecton CLI to use with this repo
 
-See installation [instructions](https://docs.tecton.ai/v2/setting-up-tecton/02-tecton-cli-setup.html)
+See installation [instructions](https://docs.tecton.ai/docs/setting-up-tecton/development-setup/installing-the-tecton-cli/)
