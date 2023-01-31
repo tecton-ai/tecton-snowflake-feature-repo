@@ -6,4 +6,4 @@ Please see [Tecton's documentation](https://docs.tecton.ai/) for more informatio
 
 # Install the latest version of Tecton CLI to use with this repo
 
-See installation [instructions](https://docs.tecton.ai/docs/setting-up-tecton/development-setup/installing-the-tecton-cli/)
+Create a Python virtual environment with Python 3.8.x, and install the Tecton CLI and other packages used in our sample notebook using the command `pip install -r requirements.txt`. Please see our [installation instructions](https://docs.tecton.ai/docs/setting-up-tecton/development-setup/installing-the-tecton-cli/) for more information.
