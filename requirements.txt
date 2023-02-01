@@ -1,5 +1,5 @@
 pandas
 python-dotenv
-tecton[snowflake]==0.5.0b59
+tecton[snowflake]
 snowflake-connector-python==2.7.7
 snowflake-snowpark-python==0.8.0
