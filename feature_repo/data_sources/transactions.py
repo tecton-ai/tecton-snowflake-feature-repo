@@ -8,5 +8,6 @@ transactions = BatchSource(
       database="TECTON_DEMO_DATA",
       schema="FRAUD_DEMO",
       table="TRANSACTIONS",
+      timestamp_field="TIMESTAMP"
     ),
 )
