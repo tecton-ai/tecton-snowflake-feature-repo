@@ -1,5 +1,0 @@
-pandas
-python-dotenv
-tecton[snowflake]
-snowflake-connector-python==2.9.0
-snowflake-snowpark-python==1.4.0
