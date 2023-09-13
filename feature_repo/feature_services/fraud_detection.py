@@ -1,13 +1,12 @@
 from tecton import FeatureService
-from features.batch_feature_views.user_transaction_metrics import user_transaction_metrics
-from features.batch_feature_views.user_category_count import user_category_count
-from features.batch_feature_views.merchant_fraud_rate import merchant_fraud_rate
+from features.on_demand_feature_views.similarity import fuzzy_similarity
 
 
 fraud_detection_feature_service = FeatureService(
     name='fraud_detection_feature_service',
+    on_demand_environment="tecton-python-snowpark:0.1",
+    online_serving_enabled=True,
     features=[
-        user_transaction_metrics,
-        user_category_count
+        fuzzy_similarity
     ]
 )

@@ -1,0 +1,27 @@
+apiVersion: v1
+clusters:
+- cluster:
+    certificate-authority-data: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUM1ekNDQWMrZ0F3SUJBZ0lCQURBTkJna3Foa2lHOXcwQkFRc0ZBREFWTVJNd0VRWURWUVFERXdwcmRXSmwKY201bGRHVnpNQjRYRFRJeE1UQXlOVEl4TXpneU9Gb1hEVE14TVRBeU16SXhNemd5T0Zvd0ZURVRNQkVHQTFVRQpBeE1LYTNWaVpYSnVaWFJsY3pDQ0FTSXdEUVlKS29aSWh2Y05BUUVCQlFBRGdnRVBBRENDQVFvQ2dnRUJBTXVwCkdsRkcyRG1UTEVJK3BWVHFTS2JiM2wvcTV3MkRuUXdDUVRrMW01Q3ZxZDRpS1YvaklMVWNTcHYxNVlJUVVJWGQKUFY1ZFptOW1mOEdxQitsUjAzYmRyeXBwbUxySFc5UEdLM3p6dHBtVnF5bWZ2bno4WXNIV24vbmlRTlBNVjc3SQpHYmV3TVhEdVlWajIvenNwa0d5eFdPM0hERXZleGowejc0Z2ZsWVQybk9aeWltZkNSUHhEckgvUHptZzBKbWU4ClZ0eTlpWHFzMnZrT0NoRlFxUVl1UHFrUkFWZnFMRlpJL210ZGlSejdGMVh2ZHRLRVljcnRBNWQ2aWlGdUFyeHAKSlFQbnFTbkE5eERTNTVzRVdzY0toZHBvVzR4VXhWbFdzaDBSTUt6TXhIZGZZZkdha3VwSVp5VzRDVWU4VUNwdwpWNXkxMjhBdVBUc2d6MTlQYVlNQ0F3RUFBYU5DTUVBd0RnWURWUjBQQVFIL0JBUURBZ0trTUE4R0ExVWRFd0VCCi93UUZNQU1CQWY4d0hRWURWUjBPQkJZRUZLd1VuVHZDRmZ3dkU2aHI1MVd2d2hoUDhXcFpNQTBHQ1NxR1NJYjMKRFFFQkN3VUFBNElCQVFCRUxmWW9wNFZJejJOSnB1YW5BeVh2RzdEVGtNdEZFSVdnMDFkdUZJVUFLcGFuWGZ0NQpOSGlZKzNqTXFrZnVNa0NmTnM3V0U5cXNscGJ4c0t5Yzh0TjlUYXNMSVNzd2R5b0tSUjFqY0luaTN1MG5oMXdjCkNKTTFKUE9GcGpUaWhFNzA2eEw4TXF3MjN6d0t5LzhST2RRMy81RzdyY0xpQXR0N1kraUhRSWN4VHFCdThDYVQKZVdreWxOeDZhREsrZWZudW5UL2tSM0hBTEYyWE1wVXBnYkNlTDh4Q1FoSlVUUEVZU3NzL3dzVnlQdklJc2tKZQpHR0cyTUJMVXNXajdCeUZrT1RSMlhVZjFSOG5HT01tRnNWdlZDdkRGQ2ladHd4bkJLSjF5cXA5TzFZUnFTN1F1Cnp0TkRkbUs3ZnczYWZ0ZGdvTUM2SFUzYjIxTWMrZTc3RldZNAotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg==
+    server: https://0A8E0BBA49023E3C85B5D00DC2017BB3.gr7.us-west-2.eks.amazonaws.com
+  name: arn:aws:eks:us-west-2:843850565897:cluster/tecton-dev-shared
+contexts:
+- context:
+    cluster: arn:aws:eks:us-west-2:843850565897:cluster/tecton-dev-shared
+    user: arn:aws:eks:us-west-2:843850565897:cluster/tecton-dev-shared
+  name: arn:aws:eks:us-west-2:843850565897:cluster/tecton-dev-shared
+current-context: arn:aws:eks:us-west-2:843850565897:cluster/tecton-dev-shared
+kind: Config
+preferences: {}
+users:
+- name: arn:aws:eks:us-west-2:843850565897:cluster/tecton-dev-shared
+  user:
+    exec:
+      apiVersion: client.authentication.k8s.io/v1beta1
+      args:
+      - --region
+      - us-west-2
+      - eks
+      - get-token
+      - --cluster-name
+      - tecton-dev-shared
+      command: aws

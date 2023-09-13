@@ -1,4 +1,4 @@
-from tecton import batch_feature_view, Aggregation
+from tecton import batch_feature_view, Aggregation, RedisConfig
 from entities import user, category
 from data_sources.transactions import transactions
 from datetime import datetime, timedelta
@@ -16,6 +16,7 @@ from datetime import datetime, timedelta
         Aggregation(column='TRANSACTION', function='sum', time_window=timedelta(days=40))
     ],
     online=True,
+    online_store=RedisConfig(),
     feature_start_time=datetime(2020, 10, 10),
     owner='david@tecton.ai',
     description='User transaction totals over a series of time windows, updated daily.'
